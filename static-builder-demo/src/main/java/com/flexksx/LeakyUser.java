@@ -1,11 +1,6 @@
 package com.flexksx;
 
-/**
- * Counter-example for the demo: {@link User} with the {@code static} keyword left off the builder.
- *
- * <p>An inner class needs an enclosing instance, so {@code builder()} cannot stay static either.
- * You need a finished {@code LeakyUser} before you can start building one.
- */
+/** Counter-example: {@link User} without the {@code static} keyword on the builder. */
 public record LeakyUser(String id, String email, String firstName, String lastName) {
   public LeakyUser {
     if (id == null || id.isBlank()) {

@@ -6,12 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
-/**
- * Shows what forgetting {@code static} on a builder costs you.
- *
- * <p>{@link User.Builder} is static nested. {@link LeakyUser.Builder} is inner, so every instance
- * of it needs an enclosing {@link LeakyUser}: the object the builder was supposed to produce.
- */
+/** Showcases a few failure modes of a builder without the {@code static} keyword. */
 class BuilderLeakTest {
 
   @Test

@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'checkstyle'
+    id 'com.diffplug.spotless' version '8.10.2'
 }
 
 group = 'com.flexksx'
@@ -14,6 +15,12 @@ java {
 
 repositories {
     mavenCentral()
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+    }
 }
 
 checkstyle {
