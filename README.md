@@ -68,7 +68,7 @@ If you want to restrict any `Builder`, then just use an appropriate regex.
 ### Catching it in the bytecode
 
 ArchUnit works on compiled classes, so it sees what `javap` sees.
-From `ArchUnitRuleTest.java`:
+From [`ArchUnitRuleTest.java`](static-builder-demo/src/test/java/com/flexksx/ArchUnitRuleTest.java):
 
 ```java
 classes().that().haveSimpleName("Builder").should().notBeInnerClasses();
